@@ -1,0 +1,27 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='我的研友' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view wx:if="{{has_m_user}}" class="flex-column" style='padding-top:{{statusBarHeight2}}px'>
+  <view class='clauseS'>
+    <image class='friendsImg' src="{{avatar}}"></image>
+    <view class='friendInfo'>
+      <view>{{name}}</view>
+      <view class='friendMore'>电话:{{phone}}</view>
+    </view>
+  </view>
+  <view class='delFriend'><button type='warn' hidden='{{showDel}}' form-type='submit' bindtap='delFirends'>删除研友</button></view>
+</view>
+
+<view wx:else class='noFirendsTip' style='padding-top:{{statusBarHeight2}}px'>
+  <view class='noFirends'>
+      <view>目前你还没有研友试试用</view>
+      <button class='turnTo removeBtn' bindtap='recommend'>研友推荐</button>
+      <view>或者</view>
+      <button class='turnTo removeBtn'  bindtap='onShareAppMessage' open-type="share">邀请好友</button>
+      <view>找个研友吧</view>
+  </view>
+</view>
+ <modal hidden="{{hidden}}" title="是否删除研友" confirm-text="删除" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}"> 
+  <view style="text-align:center;">删除后将无法再添加该研友</view> 
+</modal>
+

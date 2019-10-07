@@ -1,0 +1,57 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友计划' show_bol='{{true}}' show_home='{{true}}'></component>
+</view>
+<view style="padding-top:{{statusBarHeight2}}px;">
+<view class="{{selected?'show':'hidden'}}">
+  <view class='clock'>
+    <image class='clockImg' src="../imgs/clockIn.png"></image>
+    <view class='clockCon'>
+      <view class='aggregate'>已累积打卡 <text>{{sign_day}}</text>天</view>
+      <view class='curTime'>
+      <view class='timeNum' wx:if='{{showCurrentTime}}'>{{time}}</view>
+        <view class='timeNum' wx:else>{{sign_timestamp}}</view>
+        <view class='timeTip'>{{timeTip}}</view>
+      </view>
+      <view class='motto'>
+          <text>{{motto}}</text>
+      </view>
+    </view>
+
+    <button class='clickClockIn' bindtap='clickClockIn'>{{clickClockIn}}</button>
+    <view class='friendsClock'>{{yourFri}}</view>
+    <view class='rankClock' wx:if='{{has_match_user}}'>想看看你是报考该专业第几早起的吗？</view>
+    <view class='toRank' wx:if='{{has_match_user}}' bindtap='choiceField'>选择意向专业</view>
+    <view class='rankClock' wx:if='{{is_clocked}}'>你今天是{{user_major}}专业起的第{{sign_major_rank}}早</view>
+    <view class='toRank' wx:if='{{is_clocked}}' bindtap='toRank'>点击查看排行榜</view>
+  </view>
+</view>
+
+<!-- userPage -->
+<view class="{{selected1?'show':'hidden'}}">
+  <view class="con">
+    <view class="userinfo-avatar"><open-data type="userAvatarUrl"></open-data></view>
+    <open-data type="userNickName"></open-data>
+    <open-data type="userGender" lang="zh_CN"></open-data>
+     <text class="user-motto">当前积分：{{sign_score}}</text>
+  </view>
+
+  <view class='mainCon'>
+    <view>
+      <view class='myFirend' bindtap='myFriends'>我的研友</view>
+      <view class='invitation' bindtap='friendInvitation'>研友申请</view>
+    </view>
+  </view>
+</view>
+
+<!-- foot -->
+<view class='foot'>
+  <view class="footli {{selected?'choosed':'default'}}" bindtap='clockPage'>
+      <image class='footImg' src='{{clockImg}}'></image>
+      <view>打卡</view>
+  </view>
+  <view class="footli {{selected1?'choosed':'default'}}" bindtap='userPage'>
+    <image class='footImg' src='{{userImg}}'></image>
+    <view>个人中心</view>
+  </view>
+</view>
+</view>

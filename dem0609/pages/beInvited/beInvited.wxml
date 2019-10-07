@@ -1,0 +1,38 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友计划' show_bol='{{true}}' show_home='{{false}}'></component>
+</view>
+<view class='welcome' wx:if="{{cannotEntery}}">
+  <view class='come'>
+      <view class='welcome_title'>欢迎来到研途有你</view>
+      <view class='welcome_content'>请先进行微信授权</view>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信授权</button>
+  </view>
+</view>
+
+
+<view style='position:absolute;z-index:1;top:{{statusBarHeight2}}px;left:0;right:0;right:0;'>
+  <image class='bannerImg' src="../imgs/banner.png"></image>
+ <view class='indexWrap'>
+    <view class='flex-row-center'>
+      <view class="ufo">
+        <view class="avatar">
+        <image style='width:160rpx;height:160rpx;border-radius:80rpx;' src='{{src}}'></image>
+        </view>  
+      </view>
+    </view>
+    <view class='indexCon' style='margin-top:-60rpx;'>
+      <view class='flex-row-center'>
+          <view>你的好友</view>
+          <view>{{nickName}}</view>
+          <view>邀请你成为研友</view>
+      </view>
+    </view>
+
+    <view class='indexCon wenan'>
+      <view class='flex-row-center'>漫漫考研路</view>
+      <view class='flex-row-center'>你是否愿意和TA一起并肩前进？</view>
+    </view>
+  <button class='beFriends' form-type='submit' bindtap='beFriends' disabled="{{disabled}}">同意参与</button>
+  <button class='refuse' form-type='submit' bindtap='refuse' disabled="{{disabled}}">委婉拒绝</button>
+ </view> 
+</view>

@@ -1,0 +1,11 @@
+ <view class='status-bar'>
+    <view class='goBack' bindtap='goBack' style="padding-top:{{bar_Height}}px;"  hidden='{{show_bol}}'>	
+      <image src='../imgs/goBack.png'></image>
+    </view>
+     <view class='goBack' bindtap='goHome' style="padding-top:{{bar_Height}}px;"  hidden='{{show_home}}'>	
+      <image src='../imgs/home.png'></image>
+    </view>
+    <view class="tabar {{my_class ? 'tabar2':''}}" style="padding-top:{{bar_Height}}px;">
+      <text class="red">{{title}}</text>
+    </view>
+  </view>

@@ -1,0 +1,135 @@
+/* pages/friendInfo/friendInfo.wxss */
+@import "../lib/frame.wxss";
+.welcome{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color:rgba(0,0,0,.5);
+}
+.come{
+  position: relative; 
+  width: 75%;
+
+
+  /* height: 200rpx; */
+
+
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin: auto;
+
+  margin-top:-100rpx;
+
+  /* padding-top: 50rpx; */
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+.welcome_content{
+  padding: 30rpx 0;
+  text-align: center;
+  color: #000;
+  border-bottom: 1px solid #dfd9d9;
+}
+/* .come>button{
+  font-size: 40rpx;
+  color:#02bb00;
+  background-color: #fff;
+} */
+/* .come>button::after{
+  border:none;
+} */
+
+
+
+.userinfo-avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userinfo-avatar image{
+  width:100%;
+  height: 100%;
+}
+.userinfo-nickname {
+  font-size: 45rpx;
+} 
+.userGender{
+  width:4vh;
+  height:4vh;
+}
+.con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-bottom: 40rpx;
+}
+.userinfo-avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  font-size: 45rpx;
+} 
+.beFriends,.refuse{
+  width:80%;
+  margin-top: 30rpx;
+  text-align: center;
+}
+.beFriends{
+  color:#fff;
+  background-color: rgb(255,127,91);
+}
+.refuse{
+  background-color: rgb(217,217,217);
+}
+.toast-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toast-out .toast-in {
+  width: 300rpx;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 6px;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+}
+.toast-out .toast-in span {
+  font-size: 30px;
+}
+.toast-out .toast-in .toast-txt {
+  font-size: 14px;
+}
+
+
+.turnTo{
+  color:blue;
+  text-decoration-line: underline;
+}
+.removeBtn{
+ background:transparent;
+ padding-left: 0;
+ padding-right: 0;
+  display: inline;
+}
+.removeBtn::after{
+  border:0;
+}

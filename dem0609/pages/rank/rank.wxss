@@ -1,0 +1,83 @@
+/* pages/rank/rank.wxss */
+@import "../lib/frame.wxss";
+@import "../lib/weui.wxss";
+.decode{
+  display:block;
+}
+.tabNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  margin-top: 30rpx;
+  width:500rpx;
+}
+.default{
+ padding: 10rpx 30rpx;
+ color:#000;
+ background-color: transparent;
+ border: 1rpx solid #ccc;
+ }
+.choosed{
+ /* additive-symbols: 11rpx 30rpx; */
+ padding: 10rpx 30rpx;
+ color:#fff;
+ background-color: #000;
+ border: 1rpx solid #ccc;
+}
+.show{
+  display:block;
+}
+.hidden{display:none;}
+
+.clauseS{
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx;
+  padding: 10rpx 30rpx;
+}
+.myRankInfo{
+  position: fixed;
+  bottom: 0;
+  width:97%; 
+  padding:5rpx 0 5rpx 20rpx;
+  background-color: rgb(255,127,91);
+  /* border-radius: 20rpx; */
+}
+.myName{
+  color:#fff;
+}
+.friendsImg{
+  width:120rpx;
+  height: 120rpx;
+}
+.friendInfo{
+  margin: 5rpx 0 5rpx 20rpx;
+  font-size: 30rpx;
+}
+.myTime{
+  margin-top: 20rpx;
+  font-size: 35rpx;
+}
+.subTitle{
+  color:#ccc;
+}
+.myTime{
+  color:#fff;
+}
+.knowMore,.myRank{
+  position: absolute;
+  right: 30rpx;
+  text-align: center;
+}
+.myRank{
+  margin-top: 20rpx;
+  color:#fff;
+   font-size: 31rpx;
+}
+.knowMore>image{
+  margin:15rpx 0;
+  width:70rpx;
+  height: 70rpx;
+}

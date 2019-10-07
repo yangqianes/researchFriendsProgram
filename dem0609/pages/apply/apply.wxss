@@ -1,0 +1,33 @@
+@import "../lib/frame.wxss";
+.knowMore{
+  font-size: 60rpx;
+  color: #ccc;
+  line-height: 140rpx;
+}
+/* 重复代码 */
+.noFirends{
+  position: absolute;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 60rpx;
+  height: 100rpx;
+  text-align: center;
+}
+.noFirends>view{
+  color: #ccc;
+  display: inline-block;
+}
+.noFirends>.turnTo{
+  color:blue;
+  text-decoration-line: underline;
+}
+.removeBtn{
+ background:transparent;
+ padding-left: 0;
+ padding-right: 0;
+  display: inline;
+}
+.removeBtn::after{
+  border:0;
+}

@@ -1,0 +1,8 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友计划' show_bol='{{true}}' show_home='{{true}}'></component>
+</view>
+<view class='flex-column bgc' style='top:{{statusBarHeight2}}px'>
+  <view class='frame'>距离活动开始还剩</view>
+   <view class="frame rectangle">{{day1}} 天 {{hour1}} 时 {{min1}} 分</view>
+  <view class='welcome'>欢迎第{{index_MBA}}位考研er</view>
+</view>

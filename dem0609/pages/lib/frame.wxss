@@ -1,0 +1,72 @@
+page{
+  background-color: rgb(239,239,244);
+}
+.mainCon{
+  width:100%;
+  background-color: #fff;
+  margin-top: 40rpx;
+}
+.subTit{
+  display: inline-block;
+  padding:20rpx 0 20rpx 40rpx;
+  background-color: #fff;
+}
+.list{
+  border-bottom: 2rpx solid #ccc;
+}
+.flex-column{
+  display:flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.friendsImg{
+  /* width:150rpx;
+  height: 150rpx; */
+   width:120rpx;
+  height: 120rpx;
+}
+.friendInfo{
+  margin: 10rpx 0 10rpx 20rpx;
+  /* font-size: 40rpx; */
+   font-size: 31rpx;
+}
+.clauseB,.clauseS,.myRankInfo{
+  display:flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 2rpx solid #ccc;
+}
+.clauseB{
+   padding:20rpx 0 20rpx 30rpx;
+}
+.clauseS{
+   padding:10rpx 0 10rpx 30rpx;
+}
+.subTitle{
+  margin-top: 20rpx;
+  color:#ccc;
+  font-size: 35rpx;
+}
+.knowMore{
+  position: absolute;
+  right: 30rpx;
+  font-size: 40rpx;
+  color: #ccc;
+}
+.checkOrg{
+  width:80%;
+  margin-top: 60rpx;
+  text-align: center;
+  color:#fff;
+  background-color: rgb(255,127,91);
+  border:none;
+}
+.show{
+  display:block;
+  }
+.hidden{display:none;}

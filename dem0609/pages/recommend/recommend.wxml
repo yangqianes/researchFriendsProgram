@@ -1,0 +1,12 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='推荐列表' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view class="flex-column" style='padding-top:{{statusBarHeight2}}px'>
+  <view class='clauseB'wx:key="index" bindtap='friendInfo' name="friendInfo" data-id='{{index}}' wx:for="{{gets}}">
+    <image class='friendsImg' src="{{item.avatar}}"></image>
+    <view class='friendInfo'>
+      <view>{{item.name}}</view>
+      <view class='subTitle'>点击查看详情</view>
+    </view>
+  </view>
+</view>

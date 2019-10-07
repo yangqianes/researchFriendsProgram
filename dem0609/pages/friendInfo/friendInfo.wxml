@@ -1,0 +1,91 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='详细信息' show_bol='{{fasle}}' show_home='{{true}}'></component>
+</view>
+
+
+<view class='welcome' wx:if="{{cannotEntery}}">
+  <view class='come'>
+      <view class='welcome_content' style='text-align:center;'>已发送</view>
+      <view style='width:100%;'>
+          <navigator style='width:50%;display:inline-block;text-align:center;color: #bababa;padding:30rpx 0;' open-type="exit" target="miniProgram">退出小程序</navigator>
+          <view bindtap='goClockIn' style='width:49%;display:inline-block;border-left:1px solid #eee;text-align:center;color:#02bb00;padding:30rpx 0;'>去打卡</view>
+      </view>
+  </view>
+</view>
+
+
+<view class='welcome' wx:if="{{cannotEntery2}}">
+  <view class='come'>
+      <view class='welcome_content'>
+        <view style='padding:10px;'>你已在匹配中，待申请处理或12小时后，方可重新邀请其他研友</view>
+        <!-- <view style='display:inline-block;line-height:80rpx;text-indent: 80rpx;'>你已在匹配中 ，你可以</view>
+        <button style='line-height:80rpx;' class='turnTo removeBtn' bindtap='goApply'>去同意/拒绝</button>
+        <view style='display:inline-block;line-height:80rpx;'>或等待12h后，再邀请其他研友</view> -->
+      </view>
+      <view style='width:100%;'>
+          <navigator style='width:50%;display:inline-block;text-align:center;color: #bababa;padding:30rpx 0;' open-type="exit" target="miniProgram">退出小程序</navigator>
+          <view bindtap='goClockIn' style='width:49%;display:inline-block;border-left:1px solid #eee;text-align:center;color:#02bb00;padding:30rpx 0;'>去打卡</view>
+      </view>
+  </view>
+</view>
+
+
+<view class="con" style='padding-top:{{statusBarHeight2}}px'>
+  <view class="flex-col-center">
+    <view>
+      <image style='width:150rpx;height:150rpx;border-radius:75rpx;' src="{{avatar}}"></image>
+    </view>
+    <view style="display:flex;flex:row;">
+      <view>{{name}}</view>
+      <image class='userGender' src='{{sexImg}}'></image>
+    </view>
+  </view>
+</view> 
+
+<view class='mainCon'>
+  <view class='list'>
+    <view class='subTit'>学习风格</view>
+    <view class='subTit'>{{study_style}}</view>
+  </view>
+  <view class='list'>
+    <view class='subTit'>宿舍区域</view>
+    <view class='subTit'>{{area}}</view>
+  </view>
+</view>
+
+<view class='mainCon'>
+  <view class='list'>
+    <view class='subTit'>擅长科目</view>
+    <view class='subTit'>{{good_subject}}</view>
+  </view>
+  <view class='list'>
+    <view class='subTit'>所在省份</view>
+    <view class='subTit'>{{hometown}}</view>
+  </view>
+</view>
+
+<view class='mainCon'>
+  <view class='list'>
+    <view class='subTit'>意向省份</view>
+    <view class='subTit'>{{school_place}}</view>
+  </view>
+  <view class='list'>
+    <view class='subTit'>意向学校</view>
+    <view class='subTit'>{{school_name}}</view>
+  </view>
+   <view class='list'>
+    <view class='subTit'>意向专业</view>
+    <view class='subTit'>{{school_field}}</view>
+  </view>
+  <view class='list'>
+    <view class='subTit'>考研类型</view>
+    <view class='subTit'>{{school_type}}</view>
+  </view>
+</view>
+<button class='beFriends' bindtap='invite' form-type='submit' wx:if='{{invite}}'>邀请成为研友</button>
+<view wx:if='{{accept}}'>
+  <button class='beFriends' bindtap='agree' form-type=''>同意</button>
+  <button class='beFriends' bindtap='refuse' form-type=''>拒绝</button>
+</view>
+
+

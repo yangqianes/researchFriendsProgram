@@ -1,0 +1,14 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友计划' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view  style='padding-top:{{statusBarHeight2}}px'>
+<form bindsubmit='choiceField'>
+  <view class="flex-column" >
+    <view class='clauseB' bindtap='my_school_field_single' name="my_school_field_single">
+      <view class="subtit">意向专业</view>
+      <view>{{my_school_field_single}}</view>
+    </view>
+  </view>
+  <button class='checkOrg' form-type='submit'>确认</button>
+</form>
+</view>

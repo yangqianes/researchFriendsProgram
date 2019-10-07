@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/checkNum/checkNum",
+      "pages/apply/apply",
+    "pages/clockIn/clockIn",
+    "pages/countdown/countdown",
+   
+  
+    "pages/myFriends/myFriends",    
+    "pages/recommend/recommend",
+    "pages/test/test",
+    "pages/fillInInformation/fillInInformation",
+    "pages/friendInfo/friendInfo",
+    "pages/beInvited/beInvited",
+    
+    "pages/rank/rank",
+    "pages/choice/choice"  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "研友计划",
+    "backgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationStyle":"custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,37 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友计划' show_bol='{{true}}' show_home='{{true}}'></component>
+</view>
+<view class='welcome' wx:if="{{cannotEntery}}">
+  <view class='come'>
+      <view class='welcome_title'>研友计划邀你授权</view>
+      <!-- <view class='welcome_content'>请先进行微信授权</view> -->
+      <button wx:if="{{canIUse}}"  style="background:rgb(255,127,91);width:80%;border-radius:5rem;margin-top:2rem;" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"><image src="../imgs/weixin.png" style='width:40rpx;height:40rpx;margin-right:20rpx;vertical-align:middle;'></image>微信授权</button>
+  </view>
+</view>
+
+
+<view style='position:absolute;z-index:1;top:{{statusBarHeight2}}px;left:0;right:0;right:0;'>
+  <image class='bannerImg' src="../imgs/banner.png"></image>
+ <view class='indexWrap'>
+    <view class='indexNav'>
+      <button class='indexNavLi' bindtap='onShareAppMessage' open-type="share" disabled="{{disabled}}">邀请好友</button>
+      <button class='indexNavLi' bindtap='recommendMates'>研友推荐</button>
+      <button class='indexNavLi' bindtap='single' disabled="{{disabled}}">单人打卡</button>
+    </view>
+    <image class='barImg' src='../imgs/bar.png'></image>
+    <view class='indexCon'>
+      <view class='content'>在漫漫考研路上</view>
+      <view class='content'>如果你想要独自前行</view>
+      <view class='content'>我可以给你无形的督促和暖心的鼓励</view>
+      <view class='content'>如果你希望和好友结伴</view>
+      <view class='content'>这将会是揭开你们革命友谊的新篇章</view>
+      <view class='content'>如果你期待认识其他志同道合的人</view>
+      <view class='content'>在这里你将能碰到另一个有趣的灵魂</view>
+      <button bindtap='checksession'>登陆是否过期</button>
+    </view>
+    <image class='barImg' src='../imgs/bar.png'></image>
+ </view>
+</view>
+
+
+

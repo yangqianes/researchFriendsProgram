@@ -1,0 +1,211 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='信息填写' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view style="padding-top:{{statusBarHeight2}}px;">
+<view class='tabNav'>
+  <view class="{{selected?'choosed':'default'}}" bindtap='selected'>个人信息</view>
+  <view class="{{selected1?'choosed':'default'}}" bindtap='selected1'>研友期望</view>
+</view>
+<view class="{{selected?'show':'hidden'}}">
+<form bindsubmit='personsl_details'>
+    <!-- <view style='margin-left:30rpx;'>
+        <view class='tip' >我的性别</view>
+        <radio-group name="my_sex" class="radio-group" >
+          <label><radio value="男"/>男</label>
+          <label><radio value="女"/>女</label>
+        </radio-group>
+
+        <view class='tip'>我的宿舍在</view>
+        <radio-group name="my_area" class="radio-group" >
+          <label><radio value="南区"/>南区</label>
+          <label><radio value="北区"/>北区</label>
+        </radio-group>
+
+        <view class='tip'>我的学习风格</view>
+        <radio-group name="my_study_style" class="radio-group" >
+          <label><radio value="单独"/>独立思考</label>
+          <label><radio value="团体"/>交流学习</label>
+        </radio-group>
+    </view> -->
+
+    <view class="flex-column" >
+      <view class='clauseB'>
+        <picker name="my_sex" bindchange='my_sex' value="{{my_sex}}" range="{{mySex}}" >
+          <view class="subtit">我的性别</view>
+          <view class="picker">
+            {{mySex[my_sex]}}
+          </view>
+        </picker>
+      </view>
+      <view class='clauseB'>
+        <picker name="my_area" bindchange='my_area' value="{{my_area}}" range="{{myArea}}" >
+          <view class="subtit">宿舍区域</view>
+          <view class="picker">
+            {{myArea[my_area]}}
+          </view>
+        </picker>
+      </view>
+      <view class='clauseB'>
+        <picker name="my_study_style" bindchange='my_study_style' value="{{my_study_style}}" range="{{myStudyStyle}}" >
+          <view class="subtit">学习风格</view>
+          <view class="picker">
+            {{myStudyStyle[my_study_style]}}
+          </view>
+        </picker>
+      </view>
+
+
+      <view class='clauseB'>
+        <picker name="my_good_subject" bindchange='my_good_subject' value="{{my_good_subject}}" range="{{subject}}" >
+          <view class="subtit">擅长科目</view>
+          <view class="picker">
+            {{subject[my_good_subject]}}
+          </view>
+        </picker>
+      </view>
+      <view class='clauseB' bindtap='my_hometown' name="my_hometown">
+        <view class="subtit">所在地区</view>
+        <view>{{my_hometown}}</view>
+      </view>
+    </view>
+
+    <view class="flex-column" >
+      <view class='clauseB' bindtap='my_school_place' name="my_school_place">
+        <view class="subtit">意向地区</view>
+        <view>{{my_school_place}}</view>
+      </view>
+
+      <view class='clauseB' bindtap='my_school_name'  name="my_school_name">
+        <view class="subtit">意向学校</view>
+        <view>{{my_school_name}}</view>
+      </view>
+      <view class='clauseB' bindtap='my_school_field' name="my_school_field">
+        <view class="subtit">意向专业</view>
+        <view>{{my_school_field}}</view>
+      </view>
+      <view class='clauseB'>
+        <picker name="my_school_type" bindchange='my_school_type' value="{{my_school_type}}" range="{{majorType}}">
+          <view class="subtit">考研类型</view>
+          <view class="picker">
+            {{majorType[my_school_type]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="flex-column" >
+    <view class='clauseB'>
+        <view class="subtit">手机号码</view>
+        <view class="picker">
+          <input type='number' name="phone" placeholder="请输入手机号" bindinput="phoneNum"></input>
+        </view>
+      </view>
+    </view>
+    <button class='checkOrg' form-type='submit' >下一步</button>
+  </form>
+</view>
+
+
+
+<view class="{{selected1?'show':'hidden'}}">
+<form bindsubmit='RD_expect'>
+  <!-- <view style='margin-left:30rpx;'>
+    <view class='tip'>Ta的性别</view>
+    <radio-group name="his_sex" class="radio-group" >
+      <label><radio value="男"/>男</label>
+      <label><radio value="女"/>女</label>
+      <label><radio value="不介意"/>不介意</label>
+    </radio-group>
+
+    <view class='tip'>Ta的宿舍</view>
+    <radio-group name="his_area" class="radio-group" >
+      <label><radio value="南区"/>南区</label>
+      <label><radio value="北区"/>北区</label>
+      <label><radio value="不介意"/>不介意</label>
+    </radio-group>
+    <view class='tip'>Ta的学习风格</view>
+    <radio-group name="his_study_style" class="radio-group" >
+      <label><radio value="单独"/>独立思考</label>
+      <label><radio value="团体"/>交流学习</label>
+    </radio-group>
+  </view> -->
+
+  <view class="flex-column" >
+      <view class='clauseB'>
+        <picker name="his_sex" bindchange='his_sex' value="{{his_sex}}" range="{{hisSex}}" >
+          <view class="subtit">Ta的性别</view>
+          <view class="picker">
+            {{hisSex[his_sex]}}
+          </view>
+        </picker>
+      </view>
+      <view class='clauseB'>
+        <picker name="his_area" bindchange='his_area' value="{{his_area}}" range="{{hisArea}}" >
+          <view class="subtit">Ta的宿舍</view>
+          <view class="picker">
+            {{hisArea[his_area]}}
+          </view>
+        </picker>
+      </view>
+      <view class='clauseB'>
+        <picker name="his_study_style" bindchange='his_study_style' value="{{his_study_style}}" range="{{hisStudyStyle}}" >
+          <view class="subtit">学习风格</view>
+          <view class="picker">
+            {{hisStudyStyle[his_study_style]}}
+          </view>
+        </picker>
+      </view>
+
+
+    <view class='clauseB'>
+      <picker name="his_good_subject" bindchange='his_good_subject' value="{{his_good_subject}}" range="{{subject}}" >
+      <view class="subtit">擅长科目</view>
+        <view class="picker">
+          {{subject[his_good_subject]}}
+      </view>
+      </picker>
+    </view>
+    <view class='clauseB' bindtap='his_hometown'>
+      <view class="subtit">所在地区</view>
+      <view>{{his_hometown}}</view>
+    </view>
+  </view>
+
+  <view class="flex-column" >
+    <view class='clauseB'>
+    <picker name="his_school_place" bindchange='his_school_place' value="{{his_school_place}}" range="{{hisPurposeProvince}}" >
+      <view class="subtit">意向省份</view>
+      <view class="picker">
+        {{hisPurposeProvince[his_school_place]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class='clauseB'>
+    <picker name="his_school_name" bindchange='his_school_name' value="{{his_school_name}}" range="{{hisPurposeUnv}}">
+      <view class="subtit">意向学校</view>
+      <view class="picker">
+        {{hisPurposeUnv[his_school_name]}}
+      </view>
+    </picker>
+  </view>
+  <view class='clauseB'>
+    <picker name="his_school_field" bindchange='his_school_field' value="{{his_school_field}}" range="{{hisPurposeMajor}}">
+      <view class="subtit">意向专业</view>
+      <view class="picker">
+        {{hisPurposeMajor[his_school_field]}}
+      </view>
+    </picker>
+  </view>
+  <view class='clauseB'>
+    <picker name="his_school_type" bindchange='his_school_type' value="{{his_school_type}}" range="{{hismajorType}}">
+      <view class="subtit">考研类型</view>
+      <view class="picker">
+        {{hismajorType[his_school_type]}}
+      </view>
+    </picker>
+  </view>
+</view>
+<button class='checkOrg' form-type='submit' bindtap='affirm'>确认</button>
+</form>
+</view>
+</view>

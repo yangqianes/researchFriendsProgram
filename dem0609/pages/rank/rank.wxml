@@ -1,0 +1,63 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='排行榜' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view style="padding-top:{{statusBarHeight2}}px;">
+  <view class='tabNav'>
+    <view class="{{selected?'choosed':'default'}}" bindtap='early_rank'>早起排行榜</view>
+    <view class="{{selected1?'choosed':'default'}}" bindtap='sum_rank'>累积排行榜</view>
+  </view>
+
+  <view class="{{selected?'show':'hidden'}}">
+    <view class="flex-column" style='margin-bottom:180rpx;'>
+      <view class='clauseS' wx:for="{{rank}}" wx:key="{{key}}">
+        <image class='friendsImg' src="{{item.avatar}}"></image>
+        <view class='friendInfo'>
+          <view class='friendName'>{{item.nickname}}</view>
+          <text class='subTitle decode'  decode="{{true}}">打卡时间:&nbsp;&nbsp;{{item.sign_timestamp}}</text>
+        </view>
+        <view class='knowMore'><image src="{{item.rankImg}}"></image> </view>
+      </view>
+
+
+      <view class='myRankInfo'>
+        <view class="userinfo-avatar friendsImg"><open-data type="userAvatarUrl"></open-data></view>
+        <view class='friendInfo'>
+          <open-data class='myName' type="userNickName"></open-data>
+          <text class='myTime decode' decode="{{true}}">打卡时间:&nbsp;&nbsp;{{myClockTime}}</text >
+        </view>
+        <view class='myRank'>
+          <view>我的排名</view>
+          <view>第{{myRank}}名</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="{{selected1?'show':'hidden'}}">
+    <view class="flex-column" style='margin-bottom:180rpx;'>
+      <view class='clauseS' wx:for="{{accumulate}}" wx:key="{{item}}">
+        <image class='friendsImg' src="{{item.avatar}}"></image>
+        <view class='friendInfo'>
+          <view class='friendName'>{{item.nickname}}</view>
+          <text class='subTitle decode' decode="{{true}}">累积打卡天数: &nbsp;&nbsp;{{item.sign_day}}</text>
+        </view>
+        <view class='knowMore'><image src="{{item.accumulateImg}}"></image> </view>
+      </view>
+
+
+      <view class='myRankInfo'>
+        <view class="userinfo-avatar friendsImg"><open-data type="userAvatarUrl"></open-data></view>
+        <view class='friendInfo'>
+          <open-data class='myName' type="userNickName"></open-data>
+          <text class='myTime decode' decode="{{true}}">累积打卡天数:&nbsp;&nbsp;{{sum_clock_day}}</text>
+        </view>
+        <view class='myRank'>
+          <view>我的排名</view>
+          <view>第{{mySumRank}}名</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

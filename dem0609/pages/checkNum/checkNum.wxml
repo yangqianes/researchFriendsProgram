@@ -1,0 +1,19 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='学号验证' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view style='margin:0;padding:0;padding-top:{{statusBarHeight2}}px'> 
+  <view class='titleTip'>学号验证</view>
+    <view class="itemView">
+      <view class='type' style='width:12%;'>学号</view>
+      <view class='value' style='width:80%;'>
+        <input class="input" type='number' maxlength="12" name="userName" placeholder="请输入学号" bindinput="userName"/>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class='type' style='width:12%;'>密码</view>
+      <view class='value' style='width:80%;'>
+        <input class="input" type='password' name="password" placeholder="请输入教务系统密码" bindinput="password"/>
+      </view>
+    </view>
+  <button class='checkOrg' bindtap='checkNum'> 验证 </button>
+</view>

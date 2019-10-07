@@ -1,0 +1,6 @@
+@import "../lib/frame.wxss";
+.knowMore{
+  font-size: 60rpx;
+  color: #ccc;
+  line-height: 140rpx;
+}

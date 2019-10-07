@@ -1,0 +1,19 @@
+@import "../lib/frame.wxss";
+.titleTip{
+  margin: 20rpx 0 10rpx 10rpx;
+  color: #ccc;
+}
+.itemView{
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+.type,.value{
+  padding:20rpx 0 20rpx 20rpx;
+  background-color: #fff;
+}
+.type{
+  width:100rpx;
+}

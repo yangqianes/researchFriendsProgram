@@ -1,0 +1,22 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友申请' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view wx:if="{{is_match_user}}" class="flex-column" style='padding-top:{{statusBarHeight2}}px;'>
+  <view class='clauseS'  wx:for="{{array}}"  wx:for-item="item"  wx:key="index" data-id='{{index}}'    bindtap='friendInfo'>
+    <image class='friendsImg'   src="{{item.avatar}}"></image>
+    <view class='friendInfo'>
+      <view class='friendName'>{{item.nickName}}</view>
+      <view class='friendMore'>邀请你成为研友</view>
+    </view>
+    <view>{{item.state}}</view>
+  </view>
+</view>
+<view wx:else class='noFirendsTip'>
+  <view class='noFirends'>
+      <view>你目前还没有收到研友邀请哦，使用</view>
+      <button class='turnTo removeBtn' bindtap='recommend'>研友推荐</button>
+      <view>或者</view>
+      <button class='turnTo removeBtn'  bindtap='onShareAppMessage' open-type="share">邀请好友</button>
+      <view>邀请个研友吧</view>
+  </view>
+</view>

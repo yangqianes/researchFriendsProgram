@@ -1,0 +1,54 @@
+<view class='box-detail' style="padding-top:{{statusBarHeight}}px;">
+  <component title='研友计划' show_bol='{{false}}' show_home='{{true}}'></component>
+</view>
+<view style='padding-top:{{statusBarHeight2}}px'>
+ <!-- 城市列表 -->
+ <view class='city_box' wx:if="{{province}}">
+      <view class='city_left'>
+          <scroll-view scroll-y style='width:100%;height:100%;' scroll-with-animation scroll-into-view='{{cityListId}}'>
+              <view class='city_list_box'>
+                <block wx:for='{{citylist}}' wx:key='this' wx:for-item='letterItem' wx:for-index='letterIndex'>
+                  <view class='city_first_letter' id='{{letterItem.letter}}'>{{letterItem.letter}}</view>
+                  <text class='city_name' wx:for='{{letterItem.data}}' wx:key='this' data-types='list' catchtap='cityTap' data-index='{{index}}' data-val='{{item}}'>{{item.cityName}}</text>
+                </block>
+              </view>
+          </scroll-view>
+      </view>
+      <view class='city_right'>
+          <text class='letter_item' wx:for='{{letter}}' wx:key='this' catchtap='letterTap' data-item='{{item}}'>{{item}}</text>
+      </view>
+  </view> 
+<!-- 学校列表 -->
+   <view class='city_box'  wx:elif="{{unv}}">
+      <view class='city_left'>
+          <scroll-view scroll-y style='width:100%;height:100%;' scroll-with-animation scroll-into-view='{{schoolId}}'>
+              <view class='city_list_box'>
+                <block wx:for='{{schoolList}}' wx:key='this' wx:for-item='schoolItem' wx:for-index='schoolIndex'>
+                  <view class='city_first_letter' id='{{schoolItem.letter}}'>{{schoolItem.letter}}</view>
+                  <text class='city_name' wx:for='{{schoolItem.msg}}' wx:key='this' data-types='list' catchtap='cityTap' data-index='{{index}}' data-val='{{item}}'>{{item.schoolName}}</text>
+                </block>
+              </view>
+          </scroll-view>
+      </view>
+      <view class='city_right'>
+          <text class='letter_item' wx:for='{{letter}}' wx:key='this' catchtap='letterTap' data-item='{{item}}'>{{item}}</text>
+      </view>
+  </view> 
+<!-- 专业列表 -->
+   <view class='city_box'  wx:else="{{major}}">
+      <view class='city_left'>
+          <scroll-view scroll-y style='width:100%;height:100%;' scroll-with-animation scroll-into-view='{{majorId}}'>
+              <view class='city_list_box'>
+                <block wx:for='{{majorList}}' wx:key='this' wx:for-item='majorItem' wx:for-index='majorIndex'>
+                  <view class='city_first_letter' id='{{majorItem.letter}}'>{{majorItem.letter}}</view>
+                  <text class='city_name' wx:for='{{majorItem.data}}' wx:key='this' data-types='list' catchtap='cityTap' data-index='{{index}}' data-val='{{item}}'>{{item.major}}</text>
+                </block>
+              </view>
+          </scroll-view>
+      </view>
+      <view class='city_right'>
+          <text class='letter_item' wx:for='{{letter}}' wx:key='this' catchtap='letterTap' data-item='{{item}}'>{{item}}</text>
+      </view>
+  </view> 
+</view>
+  

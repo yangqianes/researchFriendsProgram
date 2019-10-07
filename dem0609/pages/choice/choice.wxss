@@ -1,0 +1,15 @@
+@import "../lib/weui.wxss";
+@import "../lib/frame.wxss";
+.subtit{
+  width:200rpx;
+  display: inline-block;
+}
+.picker{
+  display: inline-block;
+}
+.input{
+  margin-left: 50rpx;
+}
+picker{
+  width:100%;
+}
